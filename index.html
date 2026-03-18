@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeapSort — Simulazione</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <p class="label">ALGORITMI E STRUTTURE DATI — CAPITOLO 6</p>
+    <h1>HEAPSORT <span>Simulazione Completa</span></h1>
+    <p class="subtitle">A = [7, 2, 9, 1, 8, 3, 6, 5] &nbsp;·&nbsp; ← → Spazio per navigare</p>
+  </header>
+
+  <div class="progress-bar-wrap">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <div class="phase-row">
+    <span class="phase-badge" id="phaseBadge"></span>
+    <span class="step-counter" id="stepCounter"></span>
+  </div>
+
+  <main>
+    <!-- LEFT: tree + array -->
+    <div class="left-panel">
+      <div class="card">
+        <div class="card-label">ALBERO BINARIO</div>
+        <svg id="treeSvg" viewBox="0 0 560 274" width="100%"></svg>
+        <div class="legend">
+          <span><i class="dot" style="background:#3b82f6"></i>Nodo attivo</span>
+          <span><i class="dot" style="background:#eab308"></i>Confronto</span>
+          <span><i class="dot" style="background:#f97316"></i>Swap</span>
+          <span><i class="dot" style="background:#22c55e"></i>Ordinato</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">ARRAY A[0..7]</div>
+        <div class="array-row" id="arrayRow"></div>
+        <div class="array-info" id="arrayInfo"></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: description + callstack + pseudocode -->
+    <div class="right-panel">
+      <div class="card">
+        <div class="card-label">OPERAZIONE CORRENTE</div>
+        <div class="description" id="description"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">CALL STACK</div>
+        <div id="callStack"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-label">PSEUDOCODICE</div>
+        <pre id="pseudocode"></pre>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="controls">
+      <button id="btnStart">⏮ Inizio</button>
+      <button id="btnPrev">◀ Prev</button>
+      <button id="btnPlay">▶ Play</button>
+      <button id="btnNext">Next ▶</button>
+      <button id="btnEnd">Fine ⏭</button>
+    </div>
+    <div class="speed-row">
+      <span>Velocità:</span>
+      <button class="speed-btn active" data-ms="1200">1×</button>
+      <button class="speed-btn" data-ms="2000">0.5×</button>
+      <button class="speed-btn" data-ms="600">2×</button>
+      <button class="speed-btn" data-ms="300">4×</button>
+    </div>
+    <p class="hint">← → per navigare &nbsp;·&nbsp; Spazio per play/pausa</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
